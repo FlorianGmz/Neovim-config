@@ -1,8 +1,7 @@
 vim.g.mapleader = ' '
 
 local keymap = vim.keymap -- for conciseness
-local opts = { noremap = true, silent = true }
- 
+
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
 keymap.set('n', '<leader>s', ':w<CR>', { desc = 'Save file' })
 keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close current file' })
