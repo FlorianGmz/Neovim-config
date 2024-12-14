@@ -4,7 +4,6 @@ local M = {
 }
 
 function M.config()
-	require("which-key").add({ { "<leader>f", group = "Fuzzy finder" }, { "<leader>t", group = "Tab management" } })
 	require("which-key").setup({
 		---@type false | "classic" | "modern" | "helix"
 		preset = "helix",
@@ -173,6 +172,15 @@ function M.config()
 			bt = {},
 		},
 		debug = false, -- enable wk.log in the current directory
+		require("which-key").add({
+			{ "<leader>f", group = "Fuzzy finder" },
+			{ "<leader>t", group = "Tab management" },
+			{ "<leader>c", group = "Code actions" },
+			{ "<leader>w", group = "Session Save/Restore" },
+			{ "<leader>x", group = "Trouble diagnostics" },
+			{ "<leader>s", group = "Split window" },
+			{ "<leader>r", group = "LSP" },
+		}),
 	})
 end
 
