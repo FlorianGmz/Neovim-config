@@ -3,6 +3,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 keymap.set("n", "<leader>h", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Open Lazy" })
+keymap.set("n", "<leader>m", ":Mason<CR>", { desc = "Open Mason" })
 keymap.set("n", "<leader>;", ":w<CR>", { desc = "Save file" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close current file" })
 keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit Neovim" })
