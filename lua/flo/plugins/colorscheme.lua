@@ -26,11 +26,26 @@
 
 -- catpuccin colorscheme
 
+-- return {
+-- 	"catppuccin/nvim",
+-- 	name = "catppuccin",
+-- 	priority = 1000,
+--  	config = function()
+--  		vim.cmd("colorscheme catppuccin-macchiato")
+--  	end,
+-- }
+
+-- everforest theme
+
 return {
-	"catppuccin/nvim",
-	name = "catppuccin",
-	priority = 1000,
- 	config = function()
- 		vim.cmd("colorscheme catppuccin-macchiato")
- 	end,
+	"neanias/everforest-nvim",
+	version = false,
+	lazy = false,
+	priority = 1000, -- make sure to load this before all the other start plugins
+	-- Optional; default configuration will be used if setup isn't called.
+	config = function()
+		require("everforest").setup({
+			-- Your config here
+		}, vim.cmd("colorscheme everforest"))
+	end,
 }
